@@ -36,7 +36,7 @@ public class TestWebApp {
 		driver.findElement(By.xpath("//input[@value = 'Submit' and @type = 'submit']")).click(); */
 		
 		String actual_title = driver.getTitle();
-		String expected_title = "4 function calculator";
+		String expected_title = "calculator";
 		Assert.assertEquals(actual_title, expected_title);
 		
 		driver.close();
