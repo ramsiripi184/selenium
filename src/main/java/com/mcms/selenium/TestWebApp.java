@@ -12,12 +12,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 public class TestWebApp {
- //   String username = "ravi";
-   // String password = "Welcome2IBM";
+ 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 	}
     @Test (priority = 1)
     public void test_Selenium_First() throws MalformedURLException {
@@ -26,14 +23,6 @@ public class TestWebApp {
     	RemoteWebDriver driver = new RemoteWebDriver(grid_url, dc);
 		driver.get("http://3.68.95.67:8080/jenkins_calci-1.0-SNAPSHOT/");
 		driver.manage().window().maximize();
-		
-	/* 	WebElement username_txt_box = driver.findElement(By.name("userName"));
-		username_txt_box.sendKeys("ravi");
-		driver.findElement(By.name("passName")).sendKeys("Welcome2IBM");
-
-		driver.findElement(By.xpath("//input[@value = 'Python' and @name = 'favoriteLanguage']")).click();
-		driver.findElement(By.xpath("//input[@value = 'Yes' and @name = 'interestDevsecops']")).click();
-		driver.findElement(By.xpath("//input[@value = 'Submit' and @type = 'submit']")).click(); */
 		
 		String actual_title = driver.getTitle();
 		String expected_title = "calculator";
