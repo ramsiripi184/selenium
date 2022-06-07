@@ -24,7 +24,7 @@ public class TestWebApp {
     	DesiredCapabilities dc = DesiredCapabilities.chrome();
     	URL grid_url = new URL("http://10.171.97.175:4444/wd/hub");
     	RemoteWebDriver driver = new RemoteWebDriver(grid_url, dc);
-		driver.get("http://mcms-webapp.apps.iscpocp-test.ocpdomain.local/mcms-webapp/");
+		driver.get("http://3.68.95.67:8080/jenkins_calci-1.0-SNAPSHOT/");
 		driver.manage().window().maximize();
 		
 		WebElement username_txt_box = driver.findElement(By.name("userName"));
@@ -41,24 +41,6 @@ public class TestWebApp {
 		driver.close();
     }
     
-	@Test (priority = 2)
-    public void test_Selenium_Second() throws MalformedURLException {
-    	DesiredCapabilities dc = DesiredCapabilities.chrome();
-    	URL grid_url = new URL("http://10.171.97.175:4444/wd/hub");
-    	RemoteWebDriver driver = new RemoteWebDriver(grid_url, dc);
-		driver.get("http://mcms-webapp.apps.iscpocp-test.ocpdomain.local/mcms-webapp/");
-		driver.manage().window().maximize();
-		WebElement username_txt_box = driver.findElement(By.name("userName"));
-		username_txt_box.sendKeys("ravi");
-		driver.findElement(By.name("passName")).sendKeys("Welcome2IBM");
-
-		driver.findElement(By.xpath("//input[@value = 'Java' and @name = 'favoriteLanguage']")).click();
-		driver.findElement(By.xpath("//input[@value = 'Yes' and @name = 'interestDevsecops']")).click();
-		driver.findElement(By.xpath("//input[@value = 'Submit' and @type = 'submit']")).click();
-
-		WebElement required_text = driver.findElement(By.xpath("//*/h3"));
-		Assert.assertEquals(required_text.getText(), "Welcome to MCMS DevSecOps");
-		driver.close();
-	}
+	
 
 }
