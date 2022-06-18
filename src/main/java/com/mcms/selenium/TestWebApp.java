@@ -21,7 +21,7 @@ public class TestWebApp {
     	DesiredCapabilities dc = DesiredCapabilities.chrome();
     	URL grid_url = new URL("http://10.171.97.175:4444/wd/hub");
     	RemoteWebDriver driver = new RemoteWebDriver(grid_url, dc);
-		driver.get("http://3.68.95.67:8080/jenkins_calci-1.0-SNAPSHOT/");
+		driver.get("http://3.143.217.101:8080/jenkins_calci-1.0-SNAPSHOT/");
 		driver.manage().window().maximize();
 		
 		String actual_title = driver.getTitle();
